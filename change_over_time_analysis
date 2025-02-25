@@ -13,7 +13,7 @@ SELECT
     SUM(sales_amount) AS total_sales,
     COUNT(DISTINCT customer_key) AS total_customers,
     SUM(quantity) AS total_quantity
-FROM gold.fact_sales
+FROM fact_sales
 WHERE order_date IS NOT NULL
 GROUP BY  EXTRACT ('YEAR' from order_date),EXTRACT('MONTH' FROM order_date) 
 ORDER BY ORDER_YEAR, order_month;
