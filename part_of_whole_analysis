@@ -5,6 +5,8 @@ Purpose:
     - To evaluate differences between categories.
     - Useful for A/B testing or regional comparisons.
 
+Which categories contribute the most to overall sales?
+
 with sales_by_category as (select p.category,
       sum(sales_amount) as total_sales
 from dim_products p
